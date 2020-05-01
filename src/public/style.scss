@@ -17,6 +17,7 @@
   button {
     background-color: transparent;
     color: #fff;
+    font-family: Roboto,"Open Sans",Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     border: none;
     font-size: 12px;
@@ -32,6 +33,8 @@
   }
 
   & > ul {
+    overflow-x: hidden;
+    overflow-y: auto;
     list-style-type: none;
     position: absolute;
     bottom: 100%;
