@@ -6,7 +6,7 @@
   "repository": "clappr/clappr-level-selector-plugin",
   "main": "dist/level-selector.js",
   "scripts": {
-    "release": "node_modules/.bin/webpack --p --output-filename level-selector.min.js",
+    "release": "node_modules/.bin/webpack --p --output-filename clappr-level-selector.min.js",
     "build": "node_modules/.bin/webpack --progress",
     "watch": "node_modules/.bin/webpack --progress --watch",
     "test": "npm run lint && echo 'No tests configured - aborting.'",
@@ -48,7 +48,7 @@
     "css-loader": "^0.28.10",
     "eslint": "^4.18.2",
     "html-loader": "^0.5.5",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.14.0",
     "postcss-loader": "^2.1.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.12.4",

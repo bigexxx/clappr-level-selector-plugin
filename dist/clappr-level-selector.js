@@ -7,7 +7,7 @@
 		exports["LevelSelector"] = factory(require("clappr"));
 	else
 		root["LevelSelector"] = factory(root["Clappr"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_83__) {
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_84__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -87,14 +87,22 @@ if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports) {
+
+var core = module.exports = { version: '2.5.7' };
+if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
+
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var anObject = __webpack_require__(10);
 var IE8_DOM_DEFINE = __webpack_require__(29);
-var toPrimitive = __webpack_require__(14);
+var toPrimitive = __webpack_require__(15);
 var dP = Object.defineProperty;
 
-exports.f = __webpack_require__(2) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
+exports.f = __webpack_require__(3) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
   anObject(O);
   P = toPrimitive(P, true);
   anObject(Attributes);
@@ -108,7 +116,7 @@ exports.f = __webpack_require__(2) ? Object.defineProperty : function defineProp
 
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Thank's IE8 for his funny defineProperty
@@ -118,7 +126,7 @@ module.exports = !__webpack_require__(11)(function () {
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports) {
 
 var hasOwnProperty = {}.hasOwnProperty;
@@ -128,20 +136,12 @@ module.exports = function (it, key) {
 
 
 /***/ }),
-/* 4 */
-/***/ (function(module, exports) {
-
-var core = module.exports = { version: '2.5.5' };
-if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
-
-
-/***/ }),
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var dP = __webpack_require__(1);
+var dP = __webpack_require__(2);
 var createDesc = __webpack_require__(12);
-module.exports = __webpack_require__(2) ? function (object, key, value) {
+module.exports = __webpack_require__(3) ? function (object, key, value) {
   return dP.f(object, key, createDesc(1, value));
 } : function (object, key, value) {
   object[key] = value;
@@ -163,8 +163,8 @@ module.exports = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
-var IObject = __webpack_require__(54);
-var defined = __webpack_require__(16);
+var IObject = __webpack_require__(55);
+var defined = __webpack_require__(17);
 module.exports = function (it) {
   return IObject(defined(it));
 };
@@ -175,7 +175,7 @@ module.exports = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var store = __webpack_require__(22)('wks');
-var uid = __webpack_require__(13);
+var uid = __webpack_require__(14);
 var Symbol = __webpack_require__(0).Symbol;
 var USE_SYMBOL = typeof Symbol == 'function';
 
@@ -192,10 +192,10 @@ $exports.store = store;
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(0);
-var core = __webpack_require__(4);
+var core = __webpack_require__(1);
 var ctx = __webpack_require__(28);
 var hide = __webpack_require__(5);
-var has = __webpack_require__(3);
+var has = __webpack_require__(4);
 var PROTOTYPE = 'prototype';
 
 var $export = function (type, name, source) {
@@ -297,6 +297,13 @@ module.exports = function (bitmap, value) {
 /* 13 */
 /***/ (function(module, exports) {
 
+module.exports = true;
+
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports) {
+
 var id = 0;
 var px = Math.random();
 module.exports = function (key) {
@@ -305,7 +312,7 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
@@ -323,7 +330,7 @@ module.exports = function (it, S) {
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 // 7.1.4 ToInteger
@@ -335,7 +342,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 // 7.2.1 RequireObjectCoercible(argument)
@@ -343,13 +350,6 @@ module.exports = function (it) {
   if (it == undefined) throw TypeError("Can't call method on  " + it);
   return it;
 };
-
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports) {
-
-module.exports = true;
 
 
 /***/ }),
@@ -365,7 +365,7 @@ module.exports = {};
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject = __webpack_require__(10);
-var dPs = __webpack_require__(53);
+var dPs = __webpack_require__(54);
 var enumBugKeys = __webpack_require__(23);
 var IE_PROTO = __webpack_require__(21)('IE_PROTO');
 var Empty = function () { /* empty */ };
@@ -380,7 +380,7 @@ var createDict = function () {
   var gt = '>';
   var iframeDocument;
   iframe.style.display = 'none';
-  __webpack_require__(58).appendChild(iframe);
+  __webpack_require__(59).appendChild(iframe);
   iframe.src = 'javascript:'; // eslint-disable-line no-script-url
   // createDict = iframe.contentWindow.Object;
   // html.removeChild(iframe);
@@ -424,7 +424,7 @@ module.exports = Object.keys || function keys(O) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var shared = __webpack_require__(22)('keys');
-var uid = __webpack_require__(13);
+var uid = __webpack_require__(14);
 module.exports = function (key) {
   return shared[key] || (shared[key] = uid(key));
 };
@@ -434,12 +434,18 @@ module.exports = function (key) {
 /* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
+var core = __webpack_require__(1);
 var global = __webpack_require__(0);
 var SHARED = '__core-js_shared__';
 var store = global[SHARED] || (global[SHARED] = {});
-module.exports = function (key) {
-  return store[key] || (store[key] = {});
-};
+
+(module.exports = function (key, value) {
+  return store[key] || (store[key] = value !== undefined ? value : {});
+})('versions', []).push({
+  version: core.version,
+  mode: __webpack_require__(13) ? 'pure' : 'global',
+  copyright: '© 2018 Denis Pushkarev (zloirock.ru)'
+});
 
 
 /***/ }),
@@ -456,8 +462,8 @@ module.exports = (
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var def = __webpack_require__(1).f;
-var has = __webpack_require__(3);
+var def = __webpack_require__(2).f;
+var has = __webpack_require__(4);
 var TAG = __webpack_require__(8)('toStringTag');
 
 module.exports = function (it, tag, stat) {
@@ -477,10 +483,10 @@ exports.f = __webpack_require__(8);
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(0);
-var core = __webpack_require__(4);
-var LIBRARY = __webpack_require__(17);
+var core = __webpack_require__(1);
+var LIBRARY = __webpack_require__(13);
 var wksExt = __webpack_require__(25);
-var defineProperty = __webpack_require__(1).f;
+var defineProperty = __webpack_require__(2).f;
 module.exports = function (name) {
   var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
   if (name.charAt(0) != '_' && !(name in $Symbol)) defineProperty($Symbol, name, { value: wksExt.f(name) });
@@ -499,7 +505,7 @@ exports.f = {}.propertyIsEnumerable;
 /***/ (function(module, exports, __webpack_require__) {
 
 // optional / simple context binding
-var aFunction = __webpack_require__(46);
+var aFunction = __webpack_require__(47);
 module.exports = function (fn, that, length) {
   aFunction(fn);
   if (that === undefined) return fn;
@@ -524,7 +530,7 @@ module.exports = function (fn, that, length) {
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = !__webpack_require__(2) && !__webpack_require__(11)(function () {
+module.exports = !__webpack_require__(3) && !__webpack_require__(11)(function () {
   return Object.defineProperty(__webpack_require__(30)('div'), 'a', { get: function () { return 7; } }).a != 7;
 });
 
@@ -551,11 +557,11 @@ module.exports = function (it) {
 
 exports.__esModule = true;
 
-var _iterator = __webpack_require__(48);
+var _iterator = __webpack_require__(49);
 
 var _iterator2 = _interopRequireDefault(_iterator);
 
-var _symbol = __webpack_require__(65);
+var _symbol = __webpack_require__(66);
 
 var _symbol2 = _interopRequireDefault(_symbol);
 
@@ -575,14 +581,14 @@ exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.d
 
 "use strict";
 
-var LIBRARY = __webpack_require__(17);
+var LIBRARY = __webpack_require__(13);
 var $export = __webpack_require__(9);
 var redefine = __webpack_require__(33);
 var hide = __webpack_require__(5);
 var Iterators = __webpack_require__(18);
-var $iterCreate = __webpack_require__(52);
+var $iterCreate = __webpack_require__(53);
 var setToStringTag = __webpack_require__(24);
-var getPrototypeOf = __webpack_require__(59);
+var getPrototypeOf = __webpack_require__(60);
 var ITERATOR = __webpack_require__(8)('iterator');
 var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
 var FF_ITERATOR = '@@iterator';
@@ -656,9 +662,9 @@ module.exports = __webpack_require__(5);
 /* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var has = __webpack_require__(3);
+var has = __webpack_require__(4);
 var toIObject = __webpack_require__(7);
-var arrayIndexOf = __webpack_require__(55)(false);
+var arrayIndexOf = __webpack_require__(56)(false);
 var IE_PROTO = __webpack_require__(21)('IE_PROTO');
 
 module.exports = function (object, names) {
@@ -713,12 +719,12 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 var pIE = __webpack_require__(27);
 var createDesc = __webpack_require__(12);
 var toIObject = __webpack_require__(7);
-var toPrimitive = __webpack_require__(14);
-var has = __webpack_require__(3);
+var toPrimitive = __webpack_require__(15);
+var has = __webpack_require__(4);
 var IE8_DOM_DEFINE = __webpack_require__(29);
 var gOPD = Object.getOwnPropertyDescriptor;
 
-exports.f = __webpack_require__(2) ? gOPD : function getOwnPropertyDescriptor(O, P) {
+exports.f = __webpack_require__(3) ? gOPD : function getOwnPropertyDescriptor(O, P) {
   O = toIObject(O);
   P = toPrimitive(P, true);
   if (IE8_DOM_DEFINE) try {
@@ -740,11 +746,203 @@ Object.defineProperty(exports,"__esModule",{value:true});var _main=__webpack_req
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports,"__esModule",{value:true});var _classCallCheck2=__webpack_require__(41);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _createClass2=__webpack_require__(42);var _createClass3=_interopRequireDefault(_createClass2);var _possibleConstructorReturn2=__webpack_require__(47);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(75);var _inherits3=_interopRequireDefault(_inherits2);var _clappr=__webpack_require__(83);var _levelSelector=__webpack_require__(84);var _levelSelector2=_interopRequireDefault(_levelSelector);var _style=__webpack_require__(85);var _style2=_interopRequireDefault(_style);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var AUTO=-1;var LevelSelector=function(_UICorePlugin){(0,_inherits3.default)(LevelSelector,_UICorePlugin);function LevelSelector(){(0,_classCallCheck3.default)(this,LevelSelector);return(0,_possibleConstructorReturn3.default)(this,_UICorePlugin.apply(this,arguments));}LevelSelector.prototype.bindEvents=function bindEvents(){this.listenTo(this.core,_clappr.Events.CORE_READY,this.bindPlaybackEvents);this.listenTo(this.core,_clappr.Events.CORE_ACTIVE_CONTAINER_CHANGED,this.reload);this.listenTo(this.core.mediaControl,_clappr.Events.MEDIACONTROL_RENDERED,this.render);this.listenTo(this.core.mediaControl,_clappr.Events.MEDIACONTROL_HIDE,this.hideSelectLevelMenu);};LevelSelector.prototype.unBindEvents=function unBindEvents(){this.stopListening(this.core,_clappr.Events.CORE_READY);this.stopListening(this.core,_clappr.Events.CORE_ACTIVE_CONTAINER_CHANGED);this.stopListening(this.core.mediaControl,_clappr.Events.MEDIACONTROL_RENDERED);this.stopListening(this.core.mediaControl,_clappr.Events.MEDIACONTROL_HIDE);this.stopListening(this.core.activePlayback,_clappr.Events.PLAYBACK_LEVELS_AVAILABLE);this.stopListening(this.core.activePlayback,_clappr.Events.PLAYBACK_LEVEL_SWITCH_START);this.stopListening(this.core.activePlayback,_clappr.Events.PLAYBACK_LEVEL_SWITCH_END);this.stopListening(this.core.activePlayback,_clappr.Events.PLAYBACK_BITRATE);};LevelSelector.prototype.bindPlaybackEvents=function bindPlaybackEvents(){var currentPlayback=this.core.activePlayback;this.listenTo(currentPlayback,_clappr.Events.PLAYBACK_LEVELS_AVAILABLE,this.fillLevels);this.listenTo(currentPlayback,_clappr.Events.PLAYBACK_LEVEL_SWITCH_START,this.startLevelSwitch);this.listenTo(currentPlayback,_clappr.Events.PLAYBACK_LEVEL_SWITCH_END,this.stopLevelSwitch);this.listenTo(currentPlayback,_clappr.Events.PLAYBACK_BITRATE,this.updateCurrentLevel);var playbackLevelsAvaialbeWasTriggered=currentPlayback.levels&&currentPlayback.levels.length>0;playbackLevelsAvaialbeWasTriggered&&this.fillLevels(currentPlayback.levels);};LevelSelector.prototype.reload=function reload(){this.unBindEvents();this.bindEvents();this.bindPlaybackEvents();};LevelSelector.prototype.shouldRender=function shouldRender(){if(!this.core.activeContainer)return false;var currentPlayback=this.core.activePlayback;if(!currentPlayback)return false;var respondsToCurrentLevel=currentPlayback.currentLevel!==undefined;// Only care if we have at least 2 to choose from
-var hasLevels=!!(this.levels&&this.levels.length>1);return respondsToCurrentLevel&&hasLevels;};LevelSelector.prototype.render=function render(){if(this.shouldRender()){var style=_clappr.Styler.getStyleFor(_style2.default,{baseUrl:this.core.options.baseUrl});this.$el.html(this.template({'levels':this.levels,'title':this.getTitle()}));this.$el.append(style);this.core.mediaControl.$('.media-control-right-panel').append(this.el);this.highlightCurrentLevel();}return this;};LevelSelector.prototype.fillLevels=function fillLevels(levels){var initialLevel=arguments.length>1&&arguments[1]!==undefined?arguments[1]:AUTO;if(this.selectedLevelId===undefined)this.selectedLevelId=initialLevel;this.levels=levels;this.configureLevelsLabels();this.render();};LevelSelector.prototype.configureLevelsLabels=function configureLevelsLabels(){if(this.core.options.levelSelectorConfig===undefined)return;var labelCallback=this.core.options.levelSelectorConfig.labelCallback;if(labelCallback&&typeof labelCallback!=='function')throw new TypeError('labelCallback must be a function');var hasLabels=this.core.options.levelSelectorConfig.labels;var labels=hasLabels?this.core.options.levelSelectorConfig.labels:{};if(labelCallback||hasLabels){var level=void 0;var label=void 0;for(var levelId in this.levels){level=this.levels[levelId];label=labels[level.id];if(labelCallback)level.label=labelCallback(level,label);else if(label)level.label=label;}}};LevelSelector.prototype.findLevelBy=function findLevelBy(id){var foundLevel=void 0;this.levels.forEach(function(level){if(level.id===id)foundLevel=level;});return foundLevel;};LevelSelector.prototype.onLevelSelect=function onLevelSelect(event){this.selectedLevelId=parseInt(event.target.dataset.levelSelectorSelect,10);if(this.core.activePlayback.currentLevel==this.selectedLevelId)return false;this.core.activePlayback.currentLevel=this.selectedLevelId;this.toggleContextMenu();event.stopPropagation();return false;};LevelSelector.prototype.onShowLevelSelectMenu=function onShowLevelSelectMenu(){this.toggleContextMenu();};LevelSelector.prototype.hideSelectLevelMenu=function hideSelectLevelMenu(){this.$('.level_selector ul').hide();};LevelSelector.prototype.toggleContextMenu=function toggleContextMenu(){this.$('.level_selector ul').toggle();};LevelSelector.prototype.buttonElement=function buttonElement(){return this.$('.level_selector button');};LevelSelector.prototype.levelElement=function levelElement(id){return this.$('.level_selector ul a'+(!isNaN(id)?'[data-level-selector-select="'+id+'"]':'')).parent();};LevelSelector.prototype.getTitle=function getTitle(){return(this.core.options.levelSelectorConfig||{}).title;};LevelSelector.prototype.startLevelSwitch=function startLevelSwitch(){this.buttonElement().addClass('changing');};LevelSelector.prototype.stopLevelSwitch=function stopLevelSwitch(){this.buttonElement().removeClass('changing');};LevelSelector.prototype.updateText=function updateText(level){if(level===AUTO)this.buttonElement().text(this.currentLevel?'AUTO ('+this.currentLevel.label+')':'AUTO');else this.buttonElement().text(this.findLevelBy(level).label);};LevelSelector.prototype.updateCurrentLevel=function updateCurrentLevel(info){var level=this.findLevelBy(info.level);this.currentLevel=level?level:null;this.highlightCurrentLevel();};LevelSelector.prototype.highlightCurrentLevel=function highlightCurrentLevel(){this.levelElement().removeClass('current');this.currentLevel&&this.levelElement(this.currentLevel.id).addClass('current');this.updateText(this.selectedLevelId);};(0,_createClass3.default)(LevelSelector,[{key:'name',get:function get(){return'level_selector';}},{key:'template',get:function get(){return(0,_clappr.template)(_levelSelector2.default);}},{key:'attributes',get:function get(){return{'class':this.name,'data-level-selector':''};}},{key:'events',get:function get(){return{'click [data-level-selector-select]':'onLevelSelect','click [data-level-selector-button]':'onShowLevelSelectMenu'};}}],[{key:'version',get:function get(){return VERSION;}}]);return LevelSelector;}(_clappr.UICorePlugin);exports.default=LevelSelector;module.exports=exports['default'];
+/* WEBPACK VAR INJECTION */(function(process) {Object.defineProperty(exports,"__esModule",{value:true});var _classCallCheck2=__webpack_require__(42);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _createClass2=__webpack_require__(43);var _createClass3=_interopRequireDefault(_createClass2);var _possibleConstructorReturn2=__webpack_require__(48);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(76);var _inherits3=_interopRequireDefault(_inherits2);var _clappr=__webpack_require__(84);var _levelSelector=__webpack_require__(85);var _levelSelector2=_interopRequireDefault(_levelSelector);var _style=__webpack_require__(86);var _style2=_interopRequireDefault(_style);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var AUTO=-1;var LevelSelector=function(_UICorePlugin){(0,_inherits3.default)(LevelSelector,_UICorePlugin);function LevelSelector(){(0,_classCallCheck3.default)(this,LevelSelector);return(0,_possibleConstructorReturn3.default)(this,_UICorePlugin.apply(this,arguments));}LevelSelector.prototype.bindEvents=function bindEvents(){this.listenTo(this.core,_clappr.Events.CORE_READY,this.bindPlaybackEvents);if(_clappr.Events.CORE_ACTIVE_CONTAINER_CHANGED)this.listenTo(this.core,_clappr.Events.CORE_ACTIVE_CONTAINER_CHANGED,this.reload);else this.listenTo(this.core.mediaControl,_clappr.Events.MEDIACONTROL_CONTAINERCHANGED,this.reload);this.listenTo(this.core.mediaControl,_clappr.Events.MEDIACONTROL_RENDERED,this.render);this.listenTo(this.core.mediaControl,_clappr.Events.MEDIACONTROL_HIDE,this.hideSelectLevelMenu);};LevelSelector.prototype.bindPlaybackEvents=function bindPlaybackEvents(){if(!this.playback)return;this.listenTo(this.playback,_clappr.Events.PLAYBACK_LEVELS_AVAILABLE,this.fillLevels);this.listenTo(this.playback,_clappr.Events.PLAYBACK_LEVEL_SWITCH_START,this.startLevelSwitch);this.listenTo(this.playback,_clappr.Events.PLAYBACK_LEVEL_SWITCH_END,this.stopLevelSwitch);this.listenTo(this.playback,_clappr.Events.PLAYBACK_BITRATE,this.updateCurrentLevel);var playbackLevelsAvailableWasTriggered=this.playback.levels&&this.playback.levels.length>0;playbackLevelsAvailableWasTriggered&&this.fillLevels(this.playback.levels);};LevelSelector.prototype.reload=function reload(){var _this2=this;this.stopListening();// Ensure it stop listening before rebind events (avoid duplicate events)
+process.nextTick(function(){_this2.bindEvents();_this2.bindPlaybackEvents();});};LevelSelector.prototype.shouldRender=function shouldRender(){if(!this.container||!this.playback)return false;var respondsToCurrentLevel=this.playback.currentLevel!==undefined;// Only care if we have at least 2 to choose from
+var hasLevels=!!(this.levels&&this.levels.length>1);return respondsToCurrentLevel&&hasLevels;};LevelSelector.prototype.render=function render(){if(this.shouldRender()){var style=_clappr.Styler.getStyleFor(_style2.default,{baseUrl:this.core.options.baseUrl});this.$el.html(this.template({'levels':this.levels,'title':this.getTitle()}));this.$el.append(style);this.core.mediaControl.$('.media-control-right-panel').append(this.el);this.$('.level_selector ul').css('max-height',this.core.el.offsetHeight*0.8);this.highlightCurrentLevel();}return this;};LevelSelector.prototype.fillLevels=function fillLevels(levels){var initialLevel=arguments.length>1&&arguments[1]!==undefined?arguments[1]:AUTO;if(this.selectedLevelId===undefined)this.selectedLevelId=initialLevel;var onLevelsAvailable=this.core.options&&this.core.options.levelSelectorConfig&&this.core.options.levelSelectorConfig.onLevelsAvailable;if(onLevelsAvailable){if(typeof onLevelsAvailable==='function')levels=onLevelsAvailable(levels.slice());else throw new TypeError('onLevelsAvailable must be a function');}this.levels=levels;this.configureLevelsLabels();this.render();};LevelSelector.prototype.configureLevelsLabels=function configureLevelsLabels(){if(this.core.options.levelSelectorConfig===undefined)return;var labelCallback=this.core.options.levelSelectorConfig.labelCallback;if(labelCallback&&typeof labelCallback!=='function')throw new TypeError('labelCallback must be a function');var hasLabels=this.core.options.levelSelectorConfig.labels;var labels=hasLabels?this.core.options.levelSelectorConfig.labels:{};if(labelCallback||hasLabels){var level=void 0;var label=void 0;for(var levelId in this.levels){level=this.levels[levelId];label=labels[level.id];if(labelCallback)level.label=labelCallback(level,label);else if(label)level.label=label;}}};LevelSelector.prototype.findLevelBy=function findLevelBy(id){var foundLevel=void 0;this.levels.forEach(function(level){if(level.id===id)foundLevel=level;});return foundLevel;};LevelSelector.prototype.onLevelSelect=function onLevelSelect(event){this.selectedLevelId=parseInt(event.target.dataset.levelSelectorSelect,10);if(this.playback.currentLevel==this.selectedLevelId)return false;this.playback.currentLevel=this.selectedLevelId;this.toggleContextMenu();event.stopPropagation();return false;};LevelSelector.prototype.onShowLevelSelectMenu=function onShowLevelSelectMenu(){this.toggleContextMenu();};LevelSelector.prototype.hideSelectLevelMenu=function hideSelectLevelMenu(){this.$('.level_selector ul').hide();};LevelSelector.prototype.toggleContextMenu=function toggleContextMenu(){this.$('.level_selector ul').toggle();};LevelSelector.prototype.buttonElement=function buttonElement(){return this.$('.level_selector button');};LevelSelector.prototype.levelElement=function levelElement(id){return this.$('.level_selector ul a'+(!isNaN(id)?'[data-level-selector-select="'+id+'"]':'')).parent();};LevelSelector.prototype.getTitle=function getTitle(){return(this.core.options.levelSelectorConfig||{}).title;};LevelSelector.prototype.startLevelSwitch=function startLevelSwitch(){this.buttonElement().addClass('changing');};LevelSelector.prototype.stopLevelSwitch=function stopLevelSwitch(){this.buttonElement().removeClass('changing');};LevelSelector.prototype.updateText=function updateText(level){if(level===AUTO)this.buttonElement().text(this.currentLevel?'AUTO ('+this.currentLevel.label+')':'AUTO');else this.buttonElement().text(this.findLevelBy(level).label);};LevelSelector.prototype.updateCurrentLevel=function updateCurrentLevel(info){var level=this.findLevelBy(info.level);this.currentLevel=level?level:null;this.highlightCurrentLevel();};LevelSelector.prototype.highlightCurrentLevel=function highlightCurrentLevel(){this.levelElement().removeClass('current');this.currentLevel&&this.levelElement(this.currentLevel.id).addClass('current');this.updateText(this.selectedLevelId);};(0,_createClass3.default)(LevelSelector,[{key:'name',get:function get(){return'level_selector';}},{key:'template',get:function get(){return(0,_clappr.template)(_levelSelector2.default);}},{key:'attributes',get:function get(){return{'class':this.name,'data-level-selector':''};}},{key:'events',get:function get(){return{'click [data-level-selector-select]':'onLevelSelect','click [data-level-selector-button]':'onShowLevelSelectMenu'};}},{key:'container',get:function get(){return this.core.activeContainer?this.core.activeContainer:this.core.mediaControl.container;}},{key:'playback',get:function get(){return this.core.activePlayback?this.core.activePlayback:this.core.getCurrentPlayback();}}],[{key:'version',get:function get(){return VERSION;}}]);return LevelSelector;}(_clappr.UICorePlugin);exports.default=LevelSelector;module.exports=exports['default'];
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(41)))
 
 /***/ }),
 /* 41 */
+/***/ (function(module, exports) {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+
+/***/ }),
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -759,7 +957,7 @@ exports.default = function (instance, Constructor) {
 };
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -767,7 +965,7 @@ exports.default = function (instance, Constructor) {
 
 exports.__esModule = true;
 
-var _defineProperty = __webpack_require__(43);
+var _defineProperty = __webpack_require__(44);
 
 var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -792,33 +990,33 @@ exports.default = function () {
 }();
 
 /***/ }),
-/* 43 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(44), __esModule: true };
-
-/***/ }),
 /* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(45);
-var $Object = __webpack_require__(4).Object;
+module.exports = { "default": __webpack_require__(45), __esModule: true };
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(46);
+var $Object = __webpack_require__(1).Object;
 module.exports = function defineProperty(it, key, desc) {
   return $Object.defineProperty(it, key, desc);
 };
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(9);
 // 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-$export($export.S + $export.F * !__webpack_require__(2), 'Object', { defineProperty: __webpack_require__(1).f });
+$export($export.S + $export.F * !__webpack_require__(3), 'Object', { defineProperty: __webpack_require__(2).f });
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports) {
 
 module.exports = function (it) {
@@ -828,7 +1026,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -851,27 +1049,27 @@ exports.default = function (self, call) {
 };
 
 /***/ }),
-/* 48 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(49), __esModule: true };
-
-/***/ }),
 /* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(50);
-__webpack_require__(61);
-module.exports = __webpack_require__(25).f('iterator');
-
+module.exports = { "default": __webpack_require__(50), __esModule: true };
 
 /***/ }),
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(51);
+__webpack_require__(62);
+module.exports = __webpack_require__(25).f('iterator');
+
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
-var $at = __webpack_require__(51)(true);
+var $at = __webpack_require__(52)(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
 __webpack_require__(32)(String, 'String', function (iterated) {
@@ -890,11 +1088,11 @@ __webpack_require__(32)(String, 'String', function (iterated) {
 
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(15);
-var defined = __webpack_require__(16);
+var toInteger = __webpack_require__(16);
+var defined = __webpack_require__(17);
 // true  -> String#at
 // false -> String#codePointAt
 module.exports = function (TO_STRING) {
@@ -913,7 +1111,7 @@ module.exports = function (TO_STRING) {
 
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -933,14 +1131,14 @@ module.exports = function (Constructor, NAME, next) {
 
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var dP = __webpack_require__(1);
+var dP = __webpack_require__(2);
 var anObject = __webpack_require__(10);
 var getKeys = __webpack_require__(20);
 
-module.exports = __webpack_require__(2) ? Object.defineProperties : function defineProperties(O, Properties) {
+module.exports = __webpack_require__(3) ? Object.defineProperties : function defineProperties(O, Properties) {
   anObject(O);
   var keys = getKeys(Properties);
   var length = keys.length;
@@ -952,7 +1150,7 @@ module.exports = __webpack_require__(2) ? Object.defineProperties : function def
 
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
@@ -964,14 +1162,14 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // false -> Array#indexOf
 // true  -> Array#includes
 var toIObject = __webpack_require__(7);
-var toLength = __webpack_require__(56);
-var toAbsoluteIndex = __webpack_require__(57);
+var toLength = __webpack_require__(57);
+var toAbsoluteIndex = __webpack_require__(58);
 module.exports = function (IS_INCLUDES) {
   return function ($this, el, fromIndex) {
     var O = toIObject($this);
@@ -993,11 +1191,11 @@ module.exports = function (IS_INCLUDES) {
 
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.15 ToLength
-var toInteger = __webpack_require__(15);
+var toInteger = __webpack_require__(16);
 var min = Math.min;
 module.exports = function (it) {
   return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
@@ -1005,10 +1203,10 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(15);
+var toInteger = __webpack_require__(16);
 var max = Math.max;
 var min = Math.min;
 module.exports = function (index, length) {
@@ -1018,7 +1216,7 @@ module.exports = function (index, length) {
 
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var document = __webpack_require__(0).document;
@@ -1026,12 +1224,12 @@ module.exports = document && document.documentElement;
 
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-var has = __webpack_require__(3);
-var toObject = __webpack_require__(60);
+var has = __webpack_require__(4);
+var toObject = __webpack_require__(61);
 var IE_PROTO = __webpack_require__(21)('IE_PROTO');
 var ObjectProto = Object.prototype;
 
@@ -1045,21 +1243,21 @@ module.exports = Object.getPrototypeOf || function (O) {
 
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.13 ToObject(argument)
-var defined = __webpack_require__(16);
+var defined = __webpack_require__(17);
 module.exports = function (it) {
   return Object(defined(it));
 };
 
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(62);
+__webpack_require__(63);
 var global = __webpack_require__(0);
 var hide = __webpack_require__(5);
 var Iterators = __webpack_require__(18);
@@ -1081,13 +1279,13 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var addToUnscopables = __webpack_require__(63);
-var step = __webpack_require__(64);
+var addToUnscopables = __webpack_require__(64);
+var step = __webpack_require__(65);
 var Iterators = __webpack_require__(18);
 var toIObject = __webpack_require__(7);
 
@@ -1122,14 +1320,14 @@ addToUnscopables('entries');
 
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports) {
 
 module.exports = function () { /* empty */ };
 
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports) {
 
 module.exports = function (done, value) {
@@ -1138,53 +1336,53 @@ module.exports = function (done, value) {
 
 
 /***/ }),
-/* 65 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(66), __esModule: true };
-
-/***/ }),
 /* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(67);
-__webpack_require__(72);
-__webpack_require__(73);
-__webpack_require__(74);
-module.exports = __webpack_require__(4).Symbol;
-
+module.exports = { "default": __webpack_require__(67), __esModule: true };
 
 /***/ }),
 /* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(68);
+__webpack_require__(73);
+__webpack_require__(74);
+__webpack_require__(75);
+module.exports = __webpack_require__(1).Symbol;
+
+
+/***/ }),
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // ECMAScript 6 symbols shim
 var global = __webpack_require__(0);
-var has = __webpack_require__(3);
-var DESCRIPTORS = __webpack_require__(2);
+var has = __webpack_require__(4);
+var DESCRIPTORS = __webpack_require__(3);
 var $export = __webpack_require__(9);
 var redefine = __webpack_require__(33);
-var META = __webpack_require__(68).KEY;
+var META = __webpack_require__(69).KEY;
 var $fails = __webpack_require__(11);
 var shared = __webpack_require__(22);
 var setToStringTag = __webpack_require__(24);
-var uid = __webpack_require__(13);
+var uid = __webpack_require__(14);
 var wks = __webpack_require__(8);
 var wksExt = __webpack_require__(25);
 var wksDefine = __webpack_require__(26);
-var enumKeys = __webpack_require__(69);
-var isArray = __webpack_require__(70);
+var enumKeys = __webpack_require__(70);
+var isArray = __webpack_require__(71);
 var anObject = __webpack_require__(10);
 var isObject = __webpack_require__(6);
 var toIObject = __webpack_require__(7);
-var toPrimitive = __webpack_require__(14);
+var toPrimitive = __webpack_require__(15);
 var createDesc = __webpack_require__(12);
 var _create = __webpack_require__(19);
-var gOPNExt = __webpack_require__(71);
+var gOPNExt = __webpack_require__(72);
 var $GOPD = __webpack_require__(38);
-var $DP = __webpack_require__(1);
+var $DP = __webpack_require__(2);
 var $keys = __webpack_require__(20);
 var gOPD = $GOPD.f;
 var dP = $DP.f;
@@ -1312,7 +1510,7 @@ if (!USE_NATIVE) {
   __webpack_require__(27).f = $propertyIsEnumerable;
   __webpack_require__(36).f = $getOwnPropertySymbols;
 
-  if (DESCRIPTORS && !__webpack_require__(17)) {
+  if (DESCRIPTORS && !__webpack_require__(13)) {
     redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
   }
 
@@ -1396,13 +1594,13 @@ setToStringTag(global.JSON, 'JSON', true);
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var META = __webpack_require__(13)('meta');
+var META = __webpack_require__(14)('meta');
 var isObject = __webpack_require__(6);
-var has = __webpack_require__(3);
-var setDesc = __webpack_require__(1).f;
+var has = __webpack_require__(4);
+var setDesc = __webpack_require__(2).f;
 var id = 0;
 var isExtensible = Object.isExtensible || function () {
   return true;
@@ -1455,7 +1653,7 @@ var meta = module.exports = {
 
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
@@ -1476,7 +1674,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.2 IsArray(argument)
@@ -1487,7 +1685,7 @@ module.exports = Array.isArray || function isArray(arg) {
 
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
@@ -1512,27 +1710,27 @@ module.exports.f = function getOwnPropertyNames(it) {
 
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports) {
 
-
-
-/***/ }),
-/* 73 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(26)('asyncIterator');
 
 
 /***/ }),
 /* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(26)('observable');
+__webpack_require__(26)('asyncIterator');
 
 
 /***/ }),
 /* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(26)('observable');
+
+
+/***/ }),
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1540,11 +1738,11 @@ __webpack_require__(26)('observable');
 
 exports.__esModule = true;
 
-var _setPrototypeOf = __webpack_require__(76);
+var _setPrototypeOf = __webpack_require__(77);
 
 var _setPrototypeOf2 = _interopRequireDefault(_setPrototypeOf);
 
-var _create = __webpack_require__(80);
+var _create = __webpack_require__(81);
 
 var _create2 = _interopRequireDefault(_create);
 
@@ -1571,30 +1769,30 @@ exports.default = function (subClass, superClass) {
 };
 
 /***/ }),
-/* 76 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(77), __esModule: true };
-
-/***/ }),
 /* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(78);
-module.exports = __webpack_require__(4).Object.setPrototypeOf;
-
+module.exports = { "default": __webpack_require__(78), __esModule: true };
 
 /***/ }),
 /* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// 19.1.3.19 Object.setPrototypeOf(O, proto)
-var $export = __webpack_require__(9);
-$export($export.S, 'Object', { setPrototypeOf: __webpack_require__(79).set });
+__webpack_require__(79);
+module.exports = __webpack_require__(1).Object.setPrototypeOf;
 
 
 /***/ }),
 /* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.3.19 Object.setPrototypeOf(O, proto)
+var $export = __webpack_require__(9);
+$export($export.S, 'Object', { setPrototypeOf: __webpack_require__(80).set });
+
+
+/***/ }),
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Works with __proto__ only. Old v8 can't work with null proto objects.
@@ -1625,24 +1823,24 @@ module.exports = {
 
 
 /***/ }),
-/* 80 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(81), __esModule: true };
-
-/***/ }),
 /* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(82);
-var $Object = __webpack_require__(4).Object;
+module.exports = { "default": __webpack_require__(82), __esModule: true };
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(83);
+var $Object = __webpack_require__(1).Object;
 module.exports = function create(P, D) {
   return $Object.create(P, D);
 };
 
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(9);
@@ -1651,35 +1849,35 @@ $export($export.S, 'Object', { create: __webpack_require__(19) });
 
 
 /***/ }),
-/* 83 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_83__;
-
-/***/ }),
 /* 84 */
 /***/ (function(module, exports) {
 
-module.exports = "<button data-level-selector-button>\n  Auto\n</button>\n<ul>\n  <% if (title) { %>\n  <li data-title><%= title %></li>\n  <% }; %>\n  <li><a href=\"#\" data-level-selector-select=\"-1\">AUTO</a></li>\n  <% for (var i = 0; i < levels.length; i++) { %>\n    <li><a href=\"#\" data-level-selector-select=\"<%= levels[i].id %>\"><%= levels[i].label %></a></li>\n  <% }; %>\n</ul>\n";
+module.exports = __WEBPACK_EXTERNAL_MODULE_84__;
 
 /***/ }),
 /* 85 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"level_head\">\n  <span class=\"level_title\">Качество:</span>\n  <button data-level-selector-button>\n    Auto\n  </button>\n</div>\n\n<ul>\n  <% if (title) { %>\n  <li data-title><%= title %></li>\n  <% }; %>\n  <li><a href=\"#\" data-level-selector-select=\"-1\">AUTO</a></li>\n  <% for (var i = 0; i < levels.length; i++) { %>\n    <li><a href=\"#\" data-level-selector-select=\"<%= levels[i].id %>\"><%= levels[i].label %></a></li>\n  <% }; %>\n</ul>\n";
+
+/***/ }),
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(86);
+var content = __webpack_require__(87);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(88)(content, {"singleton":true});
+var update = __webpack_require__(89)(content, {"singleton":true});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/postcss-loader/lib/index.js!../../node_modules/sass-loader/lib/loader.js?includePaths[]=/Volumes/Data/bruno/workspace/clappr/clappr-level-selector-plugin/node_modules/compass-mixins/lib&includePaths[]=/Volumes/Data/bruno/workspace/clappr/clappr-level-selector-plugin/node_modules/clappr/src/base/scss&includePaths[]=/Volumes/Data/bruno/workspace/clappr/clappr-level-selector-plugin/src/base/scss!./style.scss", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/postcss-loader/lib/index.js!../../node_modules/sass-loader/lib/loader.js?includePaths[]=/Volumes/Data/bruno/workspace/clappr/clappr-level-selector-plugin/node_modules/compass-mixins/lib&includePaths[]=/Volumes/Data/bruno/workspace/clappr/clappr-level-selector-plugin/node_modules/clappr/src/base/scss&includePaths[]=/Volumes/Data/bruno/workspace/clappr/clappr-level-selector-plugin/src/base/scss!./style.scss");
+		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/postcss-loader/lib/index.js!../../node_modules/sass-loader/lib/loader.js?includePaths[]=/Users/bigexxx/Work/github/clappr-level-selector-plugin/node_modules/compass-mixins/lib&includePaths[]=/Users/bigexxx/Work/github/clappr-level-selector-plugin/node_modules/clappr/src/base/scss&includePaths[]=/Users/bigexxx/Work/github/clappr-level-selector-plugin/src/base/scss!./style.scss", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/postcss-loader/lib/index.js!../../node_modules/sass-loader/lib/loader.js?includePaths[]=/Users/bigexxx/Work/github/clappr-level-selector-plugin/node_modules/compass-mixins/lib&includePaths[]=/Users/bigexxx/Work/github/clappr-level-selector-plugin/node_modules/clappr/src/base/scss&includePaths[]=/Users/bigexxx/Work/github/clappr-level-selector-plugin/src/base/scss!./style.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1689,21 +1887,21 @@ if(false) {
 }
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(87)(false);
+exports = module.exports = __webpack_require__(88)(false);
 // imports
 
 
 // module
-exports.push([module.i, ".level_selector[data-level-selector] {\n  float: right;\n  position: relative;\n  height: 100%; }\n  .level_selector[data-level-selector] button {\n    background-color: transparent;\n    color: #fff;\n    font-family: Roboto,\"Open Sans\",Arial,sans-serif;\n    -webkit-font-smoothing: antialiased;\n    border: none;\n    font-size: 12px;\n    height: 100%; }\n    .level_selector[data-level-selector] button:hover {\n      color: #c9c9c9; }\n    .level_selector[data-level-selector] button.changing {\n      -webkit-animation: pulse 0.5s infinite alternate; }\n  .level_selector[data-level-selector] > ul {\n    list-style-type: none;\n    position: absolute;\n    bottom: 100%;\n    display: none;\n    background-color: rgba(28, 28, 28, 0.9);\n    white-space: nowrap; }\n  .level_selector[data-level-selector] li {\n    font-size: 12px;\n    color: #eee; }\n    .level_selector[data-level-selector] li[data-title] {\n      background-color: #333;\n      padding: 8px 25px; }\n    .level_selector[data-level-selector] li a {\n      color: #eee;\n      padding: 5px 10px;\n      display: block;\n      text-decoration: none; }\n      .level_selector[data-level-selector] li a:hover {\n        background-color: rgba(255, 255, 255, 0.1);\n        color: #fff; }\n        .level_selector[data-level-selector] li a:hover a {\n          color: #fff;\n          text-decoration: none; }\n    .level_selector[data-level-selector] li.current a {\n      color: #2ecc71; }\n", ""]);
+exports.push([module.i, ".level_selector[data-level-selector] {\n  float: right;\n  position: relative;\n  height: 100%;\n  margin-left: 10px; }\n  .level_selector[data-level-selector] .level_head {\n    height: 100%; }\n  .level_selector[data-level-selector] .level_title {\n    height: 100%;\n    color: #fff;\n    font-size: 15px; }\n  .level_selector[data-level-selector] button {\n    background-color: transparent;\n    color: #fff;\n    font-family: Roboto,\"Open Sans\",Arial,sans-serif;\n    -webkit-font-smoothing: antialiased;\n    border: none;\n    font-size: 12px;\n    height: 100%; }\n    .level_selector[data-level-selector] button:hover {\n      color: #c9c9c9; }\n    .level_selector[data-level-selector] button.changing {\n      -webkit-animation: pulse 0.5s infinite alternate; }\n  .level_selector[data-level-selector] > ul {\n    overflow-x: hidden;\n    overflow-y: auto;\n    list-style-type: none;\n    position: absolute;\n    bottom: 100%;\n    border: 1px solid #212121;\n    display: none;\n    background-color: rgba(0, 0, 0, 0.5);\n    white-space: nowrap;\n    right: 0; }\n  .level_selector[data-level-selector] li {\n    font-size: 12px;\n    color: #eee; }\n    .level_selector[data-level-selector] li[data-title] {\n      background-color: #333;\n      padding: 8px 25px; }\n    .level_selector[data-level-selector] li a {\n      color: #fff;\n      padding: 2px 10px;\n      display: block;\n      text-decoration: none; }\n      .level_selector[data-level-selector] li a:hover {\n        background-color: rgba(255, 255, 255, 0.1);\n        color: #fff; }\n        .level_selector[data-level-selector] li a:hover a {\n          color: #fff;\n          text-decoration: none; }\n    .level_selector[data-level-selector] li.current a {\n      color: #2ecc71; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports) {
 
 /*
@@ -1785,7 +1983,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports) {
 
 /*

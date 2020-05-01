@@ -1,5 +1,5 @@
 const path = require('path')
-const filename = 'level-selector.js'
+const filename = 'clappr-level-selector.js'
 
 module.exports = {
   entry: path.resolve(__dirname, 'index.js'),
